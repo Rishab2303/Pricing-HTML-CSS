@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+}
+
+body {
+    background-color: hsl(240, 78%, 98%);
+}
+
+/* .main {
+    width: 100vw;
+    height: 100vh;
+
+
+} */
+
+.bg-top {
+    position: absolute;
+    left: 76rem;
+}
+
+.bg-bottom {
+    position: absolute;
+    top: 29em;
+}
+
+.container {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+
+    opacity: 1;
+
+
+    top: 8.5%;
+    left: 10%;
+    gap: 1.5em;
+
+}
+
+.price {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5em;
+}
+
+.price h1 {
+    color: hsl(232, 13%, 33%);
+
+
+}
+
+
+.price span {
+    color: hsl(234, 14%, 74%);
+    margin: 0 0.5em;
+}
+
+.plans {
+    display: flex;
+
+    width: 75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+}
+
+.box {
+
+    padding: 3em 2em 3em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 1em;
+    gap: 1.1em;
+}
+
+
+.button {
+    padding: 0.8em 6em;
+    color: white;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.box:hover {
+    transform: scaleX(1.05) scaleY(1.1);
+    cursor: pointer;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+}
+
+.box:hover button {
+    background-image: linear-gradient(to right, #ffff, #ffff);
+    color: hsl(237, 63%, 64%);
+    cursor: pointer;
+
+}
+
+hr {
+    width: 14em;
+}
+
+.text-font {
+    color: hsl(233, 13%, 49%);
+
+}
+
+.box:hover .text-font {
+    color: white
+}
+
+.plans h1 {
+    font-size: 3rem;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 31px;
+}
+
+
+.toggle input {
+    display: none;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+
+input:checked+.slider {
+    background-color: hsl(237, 63%, 64%);
+}
+
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+}
+
+.duration {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+
+@media screen and (max-width:375px) {
+    .bg-bottom {
+        display: none;
+    }
+
+    .plans {
+        flex-direction: column;
+        /* margin-top: 5em; */
+    }
+
+    .bg-top {
+        left: 45em;
+    }
+
+}
